@@ -214,20 +214,22 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bkHome.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\contractInfo.css" />
-    <Content Include="Content\forms.css" />
-    <Content Include="Content\layout.css" />
-    <Content Include="Content\login.css" />
-    <Content Include="Content\navi.css" />
-    <Content Include="Content\servicesInfo.css" />
-    <Content Include="Content\tables.css" />
+    <Content Include="Content\scripts\bkhome.js" />
+    <Content Include="Content\scripts\bklogin.js" />
+    <Content Include="Content\styles\bkHome.css" />
+    <Content Include="Content\styles\bootstrap.css" />
+    <Content Include="Content\styles\bootstrap.min.css" />
+    <Content Include="Content\styles\contractInfo.css" />
+    <Content Include="Content\styles\forms.css" />
+    <Content Include="Content\styles\layout.css" />
+    <Content Include="Content\styles\login.css" />
+    <Content Include="Content\styles\navi.css" />
+    <Content Include="Content\styles\servicesInfo.css" />
+    <Content Include="Content\styles\tables.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\styles\Site.css" />
     <Content Include="images\login\HeadBack.jpg" />
     <Content Include="images\login\login-btn.gif" />
     <Content Include="images\login\panel-c.gif" />
@@ -877,7 +879,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

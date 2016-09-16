@@ -6,17 +6,15 @@
 <head>
     <title>Our-Blog</title>
 
-    <link href="~/Content/login.css" rel="stylesheet" />
+    @*<link href="~/Content/login.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/jquery-1.10.2.intellisense.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>*@
 
-    @*<script src="~/Scripts/JQuery/jquery-1.7.1.min.js"></script>*@
+    @Styles.Render("~/Styles/bklogin");
+    @Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval");
 
-
-    @*<script src="~/Scripts/JQuery/jquery.validate.min.js" type="text/javascript"></script>
-        <script src="~/Scripts/JQuery/jquery.unobtrusive-ajax.js"></script>*@
     @*@section Styles{
             @Styles.Render("~/Styles/login")
         }
@@ -25,72 +23,6 @@
             @Scripts.Render("~/bundles/jquery")
             @Scripts.Render("~/bundles/jqueryval")
         }*@
-
-
-    <script type="text/javascript">
-
-        $(function () {
-            $("#imgCode").attr("src", "/BkLogin/ShowValidateCode?id=" + guid());
-            $("#imgCode").click(changeCheckCode);
-        });
-
-
-        function guid() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
-
-        }
-
-        function changeCheckCode() {
-            $("#imgCode").attr("src", "/BkLogin/ShowValidateCode?id=" + guid());
-            //  $("#imgCode").attr("src", $("#imgCode").attr("src") + guid);
-        }
-
-        //异步请求成功之后，执行的代码。
-        function afterLogin(data) {
-            alert('a');
-            window.location.href = "/BkHome/index";
-            //if (data.result == "ok") {
-            //    window.location.href = "/BkHome/index";
-            //} else {
-            //    if (data.result == "error") {
-            //        alert(data.info);
-            //        changeCheckCode();
-            //    } else {
-            //        //window.top.location.href = "/Error.html";
-            //    }
-
-            //}
-        }
-
-        $(function () {
-            $('#btnLogin').on('click', function () {
-                window.location.href = "/BkHome/index";
-                //$.ajax({
-                //    method: "post",
-                //    cache: false,
-                //    url: "BkLogin/index",
-                //    data: { LoginCode: $('#LoginCode').val(), LoginPwd: $('#LoginPwd').val(), vCode: $('#vCode').val() }
-                //}).done(function (data) {
-                //    if (data.result == "ok") {
-                //        window.location.href = "/BkHome/index";
-                //    } else {
-                //        if (data.result == "error") {
-                //            alert(data.info);
-                //            changeCheckCode();
-                //        } else {
-                //            //window.top.location.href = "/Error.html";
-                //        }
-
-                //    }
-                //}).fail(function (jqXHR, textStatus) {
-                //    alert("请求失败：" + textStatus);
-                //});
-            });
-        });
-    </script>
 
 </head>
 <body style="padding: 10px">
@@ -175,9 +107,10 @@
             </div>
         </div>
         <div id="logincopyright">
-            <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#"></a></p>
+            <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#"></a></p>
         </div>
 
     </div>
+    @Scripts.Render("~/bundles/bklogin");
 </body>
 </html>

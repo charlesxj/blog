@@ -20,20 +20,30 @@ namespace OurBlog
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/easyui").Include(
-                      "~/Scripts/jquery-easyui-1.4.5/jquery-{version}.js",
-                      "~/Scripts/jquery-easyui-1.4.5/jquery.easyui-{version}.js"));
+                      "~/Scripts/jquery-easyui-1.4.5/jquery.min.js",
+                      "~/Scripts/jquery-easyui-1.4.5/jquery.easyui.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/SelfDefineJS").Include(
                       "~/Scripts/self_scripts/SelfDefineJS.js"));
+            bundles.Add(new ScriptBundle("~/bundles/bklogin").Include(
+                      "~/Content/scripts/bklogin.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/SelfDefineJS").Include(
-                      "~/Scripts/self_scripts/SelfDefineJS.js"));
+            bundles.Add(new ScriptBundle("~/bundles/bkhome").Include(
+                      "~/Content/scripts/bkhome.js"));
+           
 
             bundles.Add(new StyleBundle("~/Styles/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
-            bundles.Add(new StyleBundle("~/Styles/login").Include(
-                      "~/Content/login.css"));
+                      "~/Content/styles/bootstrap.css",
+                      "~/Content/styles/site.css"));
+            bundles.Add(new StyleBundle("~/Styles/bklogin").Include(
+                      "~/Content/styles/login.css"));
+
+            bundles.Add(new StyleBundle("~/Styles/bkhome").Include(
+                     "~/Content/styles/bkHome.css"));
+            bundles.Add(new StyleBundle("~/Styles/easyui").Include(
+                     "~/Scripts/jquery-easyui-1.4.5/themes/bootstrap/easyui.css",
+                     "~/Scripts/jquery-easyui-1.4.5/themes/icon.css",
+                     "~/Scripts/jquery-easyui-1.4.5/demo/demo.css"));
         }
     }
 }
