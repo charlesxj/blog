@@ -77,6 +77,21 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\..\..\charles\e-book\asp.net+mvc4框架揭秘pdf+随书源码\asp.net.mvc.4.samples\Samples\Packages\Unity\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\..\..\..\charles\e-book\asp.net+mvc4框架揭秘pdf+随书源码\asp.net.mvc.4.samples\Samples\Packages\Unity\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\..\..\..\charles\e-book\asp.net+mvc4框架揭秘pdf+随书源码\asp.net.mvc.4.samples\Samples\Packages\Unity\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\..\..\..\charles\e-book\asp.net+mvc4框架揭秘pdf+随书源码\asp.net.mvc.4.samples\Samples\Packages\Unity\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\..\..\..\..\charles\e-book\asp.net+mvc4框架揭秘pdf+随书源码\asp.net.mvc.4.samples\Samples\Packages\Unity\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
