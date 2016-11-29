@@ -250,3 +250,7 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/OurBlog_v1021/OurBlog
+/OurBlog.rar
+/OurBlog_v1020.7z
+/OurBlog_v1021.7z

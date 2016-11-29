@@ -1,5 +1,5 @@
 ﻿
-using ElecSmoke.Common;
+using OurBlog.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +8,38 @@ using System.Web.Mvc;
 
 namespace ElecSmoke.Controllers
 {
-    public class BaseController : Controller
+    public class BaseController : ExtendedController
     {
         public UserInfo UserInfo { set; get; }
+        #region 处理自动销毁
+        public IList<IDisposable> DisposableObjects { get; private set; }
+        public BaseController()
+        {
+            this.DisposableObjects = new List<IDisposable>();
+        }
+        protected void AddDisposableOject(object obj)
+        {
+            IDisposable disposable = obj as IDisposable;
+            if (null!=disposable)
+            {
+                this.DisposableObjects.Add(disposable);
+
+            }
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                foreach (IDisposable obj in this.DisposableObjects)
+                {
+                    if (null != obj)
+                    {
+                        obj.Dispose();
+                    }
+                }
+            }
+        }
+        #endregion
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
@@ -41,5 +70,7 @@ namespace ElecSmoke.Controllers
 
             //    }
         }
+
+
     }
 }

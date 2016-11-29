@@ -1,19 +1,27 @@
 ﻿
-using ElecSmoke.Common;
+using OurBlog.Helper;
+using OurBlog.IBll;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OurBlog.Model;
 
 namespace ElecSmoke.Controllers
 {
-    public class BkLoginController : Controller
+    public class BkLoginController : BaseController
     {
         //public IUserInfoService UserInfoService = new UserInfoService();
 
-        //
-        // GET: /BkLogin/
+        public IUsersService UsersService { get; private set; }
+      
+        public BkLoginController(IUsersService usersService)
+        {
+            this.UsersService = usersService;
+
+            this.AddDisposableOject(usersService);
+        }
 
         public ActionResult Index()
         {
@@ -49,8 +57,7 @@ namespace ElecSmoke.Controllers
                 return Json(new { result = "error", info = "验证码错误！" });
             }
 
-
-            //UserInfo loginUsr = UserInfoService.LoadEnities(u => u.UserName == name && u.UserPwd == pwd).ToList()[0];
+            users ckusr = this.UsersService.GetLoginUsers(name, pwd).ToList()[0];
             var loginUsr = "ok";
 
             if (loginUsr == null)

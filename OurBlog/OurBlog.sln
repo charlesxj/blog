@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBlog", "OurBlog\OurBlog.csproj", "{71A71EBA-8AAF-4402-8E49-A6516CD1CD17}"
 EndProject
@@ -24,8 +24,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBlog.IBll", "OurBlog.IBll\OurBlog.IBll.csproj", "{FE08D440-0635-422E-94BF-0340EBBBF23A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBlog.IDal", "OurBlog.IDal\OurBlog.IDal.csproj", "{61851C95-4503-4416-8261-CB63A1D32662}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurBlog.DalFactory", "OurBlog.DalFactory\OurBlog.DalFactory.csproj", "{0DBB6E0A-73A0-4073-B7F1-BB4D96D4D0D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +59,6 @@ Global
 		{61851C95-4503-4416-8261-CB63A1D32662}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61851C95-4503-4416-8261-CB63A1D32662}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61851C95-4503-4416-8261-CB63A1D32662}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DBB6E0A-73A0-4073-B7F1-BB4D96D4D0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DBB6E0A-73A0-4073-B7F1-BB4D96D4D0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DBB6E0A-73A0-4073-B7F1-BB4D96D4D0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DBB6E0A-73A0-4073-B7F1-BB4D96D4D0D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +70,5 @@ Global
 		{D18E4748-18D3-4870-9254-37AF3D9875CE} = {9CAB040D-6CEE-4492-BD1D-670C1A4E1E03}
 		{FE08D440-0635-422E-94BF-0340EBBBF23A} = {9CAB040D-6CEE-4492-BD1D-670C1A4E1E03}
 		{61851C95-4503-4416-8261-CB63A1D32662} = {FB39BF5B-5594-4529-A80B-43B46949E7FD}
-		{0DBB6E0A-73A0-4073-B7F1-BB4D96D4D0D5} = {FB39BF5B-5594-4529-A80B-43B46949E7FD}
 	EndGlobalSection
 EndGlobal

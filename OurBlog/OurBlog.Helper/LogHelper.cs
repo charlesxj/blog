@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace ElecSmoke.Common
+namespace OurBlog.Helper
 {
     public class LogHelper
     {
